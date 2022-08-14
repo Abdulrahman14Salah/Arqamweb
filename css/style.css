@@ -52,7 +52,7 @@ header .header-img .zipper {
 }
 
 header .header-img {
-  min-height: 60vh;
+  min-height: 45vh;
 }
 
 @media (min-width: 992px) {
