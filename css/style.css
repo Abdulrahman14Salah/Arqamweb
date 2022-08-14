@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;600;700;800&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;600;700;800&display=swap");
 /* Start Global Rules */
 * {
   -webkit-box-sizing: border-box;
@@ -9,15 +8,12 @@
   margin: 0;
   font-family: "Cairo", sans-serif;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 a {
   text-decoration: none;
 }
-
 ul {
   list-style: none;
   margin: 0;
@@ -28,10 +24,27 @@ body {
 }
 /* Start Header */
 header {
-  background-color: #000857;
+  position: relative;
   color: white;
+  min-height: 120vh;
+  padding-top: 10rem;
 }
-
+@media (max-width: 992px) {
+  header {
+    background-color: #121b75;
+  }
+}
+.bg-header-desktop {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  top: -10px;
+}
+@media (max-width: 992px) {
+  .bg-header-desktop {
+    display: none;
+  }
+}
 header .header-img .rocket,
 header .header-img .laptop,
 header .header-img .f-right,
@@ -40,9 +53,7 @@ header .header-img .zipper {
   height: auto;
   margin: 1px auto;
 }
-
 @media (min-width: 992px) {
-
   header .header-img .rocket,
   header .header-img .laptop,
   header .header-img .f-right,
@@ -50,21 +61,15 @@ header .header-img .zipper {
     width: 100%;
   }
 }
-
 header .header-img {
   min-height: 45vh;
 }
-
-@media (min-width: 992px) {
-  header .header-img {
-    min-height: 70vh;
-  }
-}
-
 header .container {
   margin: 1px auto;
 }
-
+header .header-content p {
+  max-width: 95%;
+}
 header .header-content .btn-group button {
   width: 175px;
   height: 50px;
@@ -76,9 +81,8 @@ header .header-content .btn-group button {
   border-radius: 5px;
   border: none;
   transition: all 1s;
-  margin: 0 1.3rem;
+  margin: 0 0.5rem;
 }
-
 header .header-content .btn-group button:hover,
 header .header-content .btn-group button:focus {
   background-color: transparent;
@@ -86,14 +90,20 @@ header .header-content .btn-group button:focus {
   border-color: #ff7c00;
   outline: #ff7c00;
 }
-
-.go-down {
-  color: red;
+.back-header {
+  width: 40%;
+  height: auto;
+  right: -209px;
   position: absolute;
-  bottom: 30px;
+  bottom: 0;
+  z-index: -1;
+}
+.go-down {
+  bottom: -40px;
   left: 50%;
   transform: translateX(-50%);
-}
-.go-down:hover {
-  color: blue;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
