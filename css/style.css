@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;600;700;800&display=swap');
+
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body {
+  -webkit-text-size-adjust: 100%;
+}
+/* Start Header */
+header {
+  background-color: #000857;
+  color: white;
+}
+
+header .header-img .rocket,
+header .header-img .laptop,
+header .header-img .f-right,
+header .header-img .zipper {
+  position: absolute;
+  height: auto;
+  margin: 1px auto;
+}
+
+@media (min-width: 992px) {
+
+  header .header-img .rocket,
+  header .header-img .laptop,
+  header .header-img .f-right,
+  header .header-img .zipper {
+    width: 100%;
+  }
+}
+
+header .header-img {
+  min-height: 38vh;
+}
+
+@media (min-width: 992px) {
+  header .header-img {
+    min-height: 70vh;
+  }
+}
+
+header .container {
+  margin: 1px auto;
+}
+
+header .header-content .btn-group button {
+  width: 175px;
+  height: 50px;
+  margin: 0 5px;
+  background-color: #1d9ae0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  transition: all 1s;
+  margin: 0 1.3rem;
+}
+
+header .header-content .btn-group button:hover,
+header .header-content .btn-group button:focus {
+  background-color: transparent;
+  border: 0.5px solid;
+  border-color: #ff7c00;
+  outline: #ff7c00;
+}
+
+.go-down {
+  color: red;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.go-down:hover {
+  color: blue;
+}
