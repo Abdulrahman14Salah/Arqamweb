@@ -8,12 +8,14 @@
   margin: 0;
   font-family: "Cairo", sans-serif;
   -webkit-text-size-adjust: 100%;
+  cursor: default;
 }
 html {
   scroll-behavior: smooth;
 }
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 ul {
   list-style: none;
@@ -135,10 +137,67 @@ header .header-content p {
 /* Start Phase  */
 .phase {
   margin-top: 10rem;
-  min-height: 50vh;
+  min-height: 100vh;
   background-image: url(../img/home-line.png);
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
 }
-
+.phase .row {
+  margin-top: 10rem;
+}
+.phase .bg svg {
+  transition: all 0.5s;
+  filter: drop-shadow(7px 5px 30px rgba(72, 73, 121, 0.15));
+}
+.phase .bg .number {
+  left: 0;
+}
+.phase .box-hover {
+  z-index: 2;
+  top: 0;
+}
+.phase .box-hover:hover ~ svg {
+  filter: none;
+  fill: #f4f6fd !important;
+}
+.phase .two,
+.phase .four {
+  top: -100px;
+}
+.phase .one .bg span:first-of-type i,
+.phase .box-hover:hover ~ .one {
+  color: #f8e059;
+}
+.phase .two .bg span:first-of-type i,
+.phase .box-hover:hover ~ .two {
+  color: #1d9ae0;
+}
+.phase .three .bg span:first-of-type i,
+.phase .box-hover:hover ~ .three {
+  color: #69e9f2;
+}
+.phase .four .bg span:first-of-type i,
+.phase .box-hover:hover ~ .four {
+  color: #3224e9;
+}
+.phase .box span:first-of-type {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 45%;
+}
+.phase .box span:first-of-type i {
+  font-size: 60px;
+}
+.phase .box span:last-of-type {
+  z-index: -1;
+  font-size: 100px;
+  color: #f4f6fd;
+  top: 0;
+  line-height: 1;
+  transition: all 0.5s;
+}
 /* End Phase  */
 /* Start Our Vision */
 .our-vision img {
