@@ -58,6 +58,10 @@ header {
   header {
     background-color: #121b75;
   }
+  header h1 {
+    background-color: #0b5ed7;
+    border-radius: 25px 0 25px 0;
+  }
 }
 .bg-header-desktop {
   position: absolute;
