@@ -11,6 +11,7 @@
 }
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 a {
   text-decoration: none;
@@ -137,15 +138,16 @@ header .header-content p {
 /* End Header */
 /* Start Phase  */
 .phase {
-  margin-top: 10rem;
-  min-height: 100vh;
-  background-image: url(../img/home-line.png);
+  background-image: url(../img/home-line.webp);
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: contain !important;
 }
 .phase .row {
-  margin-top: 10rem;
+  min-height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .phase .bg svg {
   transition: all 0.5s;
@@ -164,7 +166,7 @@ header .header-content p {
 }
 .phase .two,
 .phase .four {
-  top: -100px;
+  top: -50px;
 }
 .phase .one .bg span:first-of-type i,
 .phase .box-hover:hover ~ .one {
@@ -183,21 +185,50 @@ header .header-content p {
   color: #3224e9;
 }
 .phase .box span:first-of-type {
-  top: 50%;
+  font-size: 0.6rem;
   left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
-  height: 45%;
 }
 .phase .box span:first-of-type i {
-  font-size: 60px;
+  font-size: 1.5rem;
 }
 .phase .box span:last-of-type {
   z-index: -1;
-  font-size: 100px;
+  font-size: 2rem;
   color: #f4f6fd;
   top: 0;
+  left: -10px;
   line-height: 1;
   transition: all 0.5s;
+}
+@media (min-width: 767px) {
+  .phase {
+    /* min-height: 70vh; */
+  }
+  .phase .box span:first-of-type  {
+    font-size: 1rem;
+  }
+  .phase .box span:first-of-type i {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+.phase .box span:last-of-type {
+  font-size: 4rem;
+}
+}
+@media (min-width: 1280px) {
+  .phase {
+    margin-top: 10rem;
+    /* min-height: 100vh; */
+  }
+  .phase .row {
+    margin-top: 10rem;
+  }
+  .phase .two,
+  .phase .four {
+    top: -100px;
+  }
 }
 /* End Phase  */
 /* Start Our Vision */
