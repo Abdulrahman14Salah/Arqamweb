@@ -53,7 +53,6 @@ h2::before {
 header {
   position: relative;
   color: white;
-  min-height: 120vh;
   padding-top: 10rem;
 }
 header .hex-1 {
@@ -96,6 +95,9 @@ header .header-img .zipper {
 header .header-img {
   min-height: 45vh;
 }
+.back-header-left {
+  z-index: -1;
+}
 header .container {
   margin: 1px auto;
 }
@@ -114,7 +116,7 @@ header .header-content p {
   z-index: -1;
 }
 .go-down {
-  bottom: -3rem;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 70px;
@@ -136,6 +138,10 @@ header .header-content p {
   background-color: #69e9f2 !important;
 }
 /* End Header */
+.space {
+  margin-top: 10rem;
+  height: 10rem;
+}
 /* Start Phase  */
 .phase {
   background-image: url(../img/home-line.webp);
@@ -185,49 +191,61 @@ header .header-content p {
   color: #3224e9;
 }
 .phase .box span:first-of-type {
-  font-size: 0.6rem;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.phase .box span:first-of-type i {
-  font-size: 1.5rem;
-}
 .phase .box span:last-of-type {
   z-index: -1;
-  font-size: 2rem;
   color: #f4f6fd;
   top: 0;
   left: -10px;
   line-height: 1;
   transition: all 0.5s;
 }
-@media (min-width: 767px) {
-  .phase {
-    /* min-height: 70vh; */
-  }
-  .phase .box span:first-of-type  {
-    font-size: 1rem;
+@media (min-width: 480px) {
+  .phase .box span:first-of-type {
+    font-size: 0.6rem;
   }
   .phase .box span:first-of-type i {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+    font-size: 1.5rem;
+  }
+  .phase .box span:last-of-type {
+    font-size: 2rem;
+  }
 }
-.phase .box span:last-of-type {
-  font-size: 4rem;
-}
+@media (min-width: 767px) {
+  .phase .box span:first-of-type {
+    font-size: 1.5rem;
+  }
+  .phase .box span:first-of-type i {
+    font-size: 3rem;
+  }
+  .phase .box span:last-of-type {
+    font-size: 4rem;
+  }
 }
 @media (min-width: 1280px) {
-  .phase {
-    margin-top: 10rem;
-    /* min-height: 100vh; */
-  }
   .phase .row {
-    margin-top: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  .phase .box {
+    padding: 25px;
   }
   .phase .two,
   .phase .four {
     top: -100px;
+  }
+  .phase .box span:first-of-type {
+    font-size: 1.5rem;
+  }
+  .phase .box span:first-of-type i {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+  }
+  .phase .box span:last-of-type {
+    font-size: 5rem;
   }
 }
 /* End Phase  */
